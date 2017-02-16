@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1
+Source Server         : 192.168.1.115
 Source Server Version : 50630
-Source Host           : 127.0.0.1:3306
+Source Host           : 192.168.1.115:3306
 Source Database       : crazybaby
 
 Target Server Type    : MYSQL
 Target Server Version : 50630
 File Encoding         : 65001
 
-Date: 2017-02-16 17:40:05
+Date: 2017-02-16 19:37:16
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,8 +27,8 @@ CREATE TABLE `article` (
   `author` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT '作者',
   `comment` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '评论',
   `status` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '状态',
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   KEY `created_at` (`created_at`),
   KEY `title` (`title`)
@@ -50,8 +50,8 @@ CREATE TABLE `article_comment` (
   `author` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT '作者',
   `content` text COLLATE utf8_unicode_ci NOT NULL COMMENT '评论内容',
   `status` tinyint(2) unsigned NOT NULL DEFAULT '0' COMMENT '数据状态',
-  `created_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
-  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `created_at` timestamp NULL DEFAULT NULL COMMENT '创建时间',
+  `updated_at` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
   PRIMARY KEY (`id`),
   KEY `article_id` (`article_id`),
   KEY `created_at` (`created_at`)
