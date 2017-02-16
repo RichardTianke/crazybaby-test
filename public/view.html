@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Crazybaby Article Detail</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="./css/bootstrap.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                padding-top: 60px;
+                padding-bottom: 40px;
+            }
+            .sidebar-nav {
+                padding: 9px 0;
+            }
+
+            @media (max-width: 980px) {
+                /* Enable use of floated navbar text */
+                .navbar-text.pull-right {
+                    float: none;
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        </style>
+        <link href="./css/bootstrap-responsive.css" rel="stylesheet">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="./js/html5shiv.js"></script>
+        <![endif]-->
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
+        <link rel="shortcut icon" href="./ico/favicon.png">
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container-fluid">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" href="/">CrazyBaby Article</a>
+                    <div class="nav-collapse collapse">
+                        
+                        <ul class="nav">
+                            <li class="active"><a href="/">Home</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+
+
+
+                <!-- Begin page content -->
+                <div class="span12 container article-detail">
+                    <div class="page-header">
+                        <h1 class="article-title"></h1>
+                        <span class="article-author"></span>
+                        |
+                        <span class="article-time"></span>
+                    </div>
+                    <p class="lead article-content"></p>
+                    <hr>
+                    <p>已有<span class="article-comment-number"></span>条评论 <a href="#myModal" role="button" class="btn" data-toggle="modal">写评论</a></p>
+
+                    <div class="article-comment">
+
+                    </div>
+
+                </div>
+
+                <div id="push"></div>
+
+            </div><!--/row-->
+
+            <hr>
+
+            <footer>
+                <p>&copy; Crazybaby 2017</p>
+            </footer>
+
+        </div><!--/.fluid-container-->
+
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade comment-section" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="myModalLabel">写评论</h3>
+            </div>
+            <div class="modal-body comment-form-section">
+                
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                <button class="btn btn-primary comment-create-btn">提交</button>
+            </div>
+        </div>
+
+        <!-- Le javascript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="./js/comment.js"></script>
+        <script src="./js/view.js"></script>
+    </body>
+</html>
+
