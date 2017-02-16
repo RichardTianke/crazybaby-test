@@ -15,6 +15,8 @@ Nginx/Apache指向到public/
 Nginx Url rewrite:
 没有用官方带的改写方式，因为放到了api目录里
 ##########################
+
+````
 location /api/{
     index index.php;
     if (!-e $request_filename){
@@ -23,3 +25,4 @@ location /api/{
         break;
     }
 }
+````
